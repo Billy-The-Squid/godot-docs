@@ -97,7 +97,7 @@ Mobile device (smartphone/tablet) - Minimum
 | **RAM**              | - **Native editor:** 3 GB                                                               |
 |                      | - **Web editor:** 6 GB                                                                  |
 +----------------------+-----------------------------------------------------------------------------------------+
-| **Storage**          | 200 MB (used for the executable, project files and cache)                               |
+| **Storage**          | 200 MB (used for the executable, project files and cache).                              |
 |                      | Exporting projects requires downloading export templates separately                     |
 |                      | (up to 1.5 GB after installation, depending on the target platforms chosen).            |
 +----------------------+-----------------------------------------------------------------------------------------+
