@@ -7,7 +7,7 @@ In GDScript, comments can be used to document your code and add descriptions to 
 members of a script. There are two differences between a normal comment and a documentation
 comment. Firstly, a documentation comment should start with double hash symbols
 ``##``. Secondly, it must immediately precede a script member, or for script descriptions,
-be placed at the top of the script. If an exported variable is documented,
+be placed at the top of the script. If an exported property is documented,
 its description is used as a tooltip in the editor. This documentation can be
 generated as XML files by the editor.
 
@@ -261,7 +261,7 @@ Here's the list of available tags:
 | | Link to enum                 |                                              |                                                              |
 +--------------------------------+----------------------------------------------+--------------------------------------------------------------+
 | | ``[member Class.name]``      | ``Get [member Node2D.scale].``               | Get :ref:`Node2D.scale <class_Node2D_property_scale>`.       |
-| | Link to member (property)    |                                              |                                                              |
+| | Link to property             |                                              |                                                              |
 +--------------------------------+----------------------------------------------+--------------------------------------------------------------+
 | | ``[method Class.name]``      | ``Call [method Node3D.hide].``               | Call :ref:`Node3D.hide() <class_Node3D_method_hide>`.        |
 | | Link to method               |                                              |                                                              |

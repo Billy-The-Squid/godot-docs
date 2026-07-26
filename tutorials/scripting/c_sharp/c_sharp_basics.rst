@@ -229,7 +229,7 @@ Here's a blank C# script with some comments to demonstrate how it works.
 
     public partial class YourCustomClass : Node
     {
-        // Member variables here, example:
+        // Properties here, example:
         private int _a = 2;
         private string _b = "textvar";
 
