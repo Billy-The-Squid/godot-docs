@@ -90,18 +90,20 @@ NavigationAgent Avoidance
 
 This section explains how to use the navigation avoidance specific to NavigationAgents.
 
-In order for NavigationAgents to use the avoidance feature the ``avoidance_enabled`` property must be set to ``true``.
+In order for NavigationAgents to either avoid or be avoided, the ``avoidance_enabled`` property must be set to ``true``. This will allow the NavigationAgent to avoid other agents on the same map and to be avoided by them in turn.
 
 .. image:: img/agent_avoidance_enabled.png
+
+Set the ``velocity`` of the NavigationAgent node as part of ``_physics_process()`` to inform the agent of the intended current velocity of the agent's parent node.
+[is this accurate? what is this used for?]
+
+Once per physics frame (if avoidance is enabled on an agent), the agent's ``velocity_computed`` signal will trigger, outputting the calculated safe speed and direction 
+in which the agent's parent node should move in order to avoid collisions with other avoidance-enabled agents or avoidance obstacles. This signal should be connected to
+a method that
 
 The ``velocity_computed`` signal of the NavigationAgent node must be connected to receive the safe velocity calculation result.
 
 .. image:: img/agent_safevelocity_signal.png
-
-Set the ``velocity`` of the NavigationAgent node in ``_physics_process()`` to update the agent with the current velocity of the agent's parent node.
-
-While avoidance is enabled on the agent the ``safe_velocity`` vector will be received with the velocity_computed signal every physics frame.
-This velocity vector should be used to move the NavigationAgent's parent node in order to avoidance collision with other avoidance using agents or avoidance obstacles.
 
 .. note::
 
@@ -109,7 +111,7 @@ This velocity vector should be used to move the NavigationAgent's parent node in
 
 .. note::
 
-    The NavigationAgent **must** be supplied with a ``target_position`` attribute,
+    The NavigationAgent **must** also be supplied with a ``target_position`` attribute,
     even if you are only using the agent for avoidance. Otherwise, the ``safe_velocity``
     received from the ``velocity_computed`` signal will always be the zero vector.
 
