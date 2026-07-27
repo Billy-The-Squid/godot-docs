@@ -88,6 +88,8 @@ There are some common user problems and important caveats to consider when writi
 NavigationAgent Avoidance
 -------------------------
 
+[Really, this should be its own separate doc, with information about RVO and how that is separate from the standard pathfinding system.]
+
 This section explains how to use the navigation avoidance specific to NavigationAgents.
 
 In order for NavigationAgents to either avoid or be avoided, the ``avoidance_enabled`` property must be set to ``true``. This will allow the NavigationAgent to avoid other agents on the same map and to be avoided by them in turn.
