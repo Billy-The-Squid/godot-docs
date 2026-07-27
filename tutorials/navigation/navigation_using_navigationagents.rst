@@ -143,8 +143,8 @@ NavigationObstacles can be used to add some environment constrains to the avoida
 
 .. note::
 
-    RVO avoidance makes implicit assumptions about natural agent behavior. E.g. that agents move on reasonable passing sides that can be assigned when they encounter each other.
-    This means that very clinical avoidance test scenarios will commonly fail. E.g. agents moved directly against each other with perfect opposite velocities will fail because the agents can not get their passing sides assigned.
+    Reciprocal Velocity Obstacles (RVO) avoidance relies on some assumptions about natural agent behavior that may mean that simplified test scenarios will fail. 
+    For example, agents moving directly towards each other with exactly opposite velocities will not be able to "deflect" to one side or another.
 
 Using the NavigationAgent ``avoidance_enabled`` property is the preferred option
 to toggle avoidance. The following code snippets can be used to
