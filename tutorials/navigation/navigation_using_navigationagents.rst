@@ -3,10 +3,9 @@
 Using NavigationAgents
 ======================
 
-NavigationsAgents are helper nodes that combine functionality
-for pathfinding, path following and agent avoidance for a Node2D/3D inheriting parent node.
-They facilitate common calls to the NavigationServer API on
-behalf of the parent actor node in a more convenient manner for beginners.
+NavigationAgents are nodes that help a Node2D/3D parent find and follow paths and avoid other agents.
+They provide a simpler way to interact with the NavigationServer API than alternatives like 
+:ref:`doc_navigation_using_navigationpathqueryobjects`.
 
 2D and 3D version of NavigationAgents are available as
 :ref:`NavigationAgent2D<class_NavigationAgent2D>` and
@@ -14,12 +13,8 @@ behalf of the parent actor node in a more convenient manner for beginners.
 
 New NavigationAgent nodes will automatically join the default navigation map on the :ref:`World2D<class_World2D>`/:ref:`World3D<class_World3D>`.
 
-NavigationsAgent nodes are optional and not a hard requirement to use the navigation system.
-Their entire functionality can be replaced with scripts and direct calls to the NavigationServer API.
-
-.. tip::
-
-    For more advanced uses consider :ref:`doc_navigation_using_navigationpathqueryobjects` over NavigationAgent nodes.
+NavigationAgents provide a simplified way to make common calls to the NavigationServer.
+They are an optional part of the navigation system, since their functionality can be replicated with direct calls to the NavigationServer API.
 
 NavigationAgent Pathfinding
 ---------------------------
